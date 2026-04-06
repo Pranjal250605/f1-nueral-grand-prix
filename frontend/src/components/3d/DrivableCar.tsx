@@ -1,6 +1,5 @@
 import { useRef, useEffect } from 'react'
 import { useFrame, useThree } from '@react-three/fiber'
-import { ContactShadows } from '@react-three/drei'
 import * as THREE from 'three'
 import { usePlayerControls } from '@/hooks/usePlayerControls'
 

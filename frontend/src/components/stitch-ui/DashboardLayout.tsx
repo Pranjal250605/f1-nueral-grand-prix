@@ -108,8 +108,7 @@ function LogoBlock({ username }: { username: string | null }) {
   return (
     <div
       className="panel-glow relative bg-black/40 backdrop-blur-2xl border border-white/[0.12] shadow-[0_30px_60px_rgba(0,0,0,0.8)] px-4 py-3"
-      style={{ borderTop: '2px solid rgba(210,0,90,0.55)', borderLeft: '2px solid rgba(210,0,90,0.3)' }}
-      style={{ clipPath: 'polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%)' }}
+      style={{ borderTop: '2px solid rgba(210,0,90,0.55)', borderLeft: '2px solid rgba(210,0,90,0.3)', clipPath: 'polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%)' }}
     >
       <div className="absolute top-0 right-0 w-[1px] h-full" style={{ background: 'rgba(245,197,24,0.4)' }} />
       <p className="font-mono text-[9px] text-zinc-600 uppercase tracking-[0.22em] mb-1">

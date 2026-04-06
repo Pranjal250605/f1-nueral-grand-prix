@@ -16,7 +16,7 @@ const DRIFT_SPEED = 60     // world units per second (backward along Z)
 export default function FloatingDust() {
   const pointsRef = useRef<THREE.Points>(null)
 
-  const { geometry, initialPositions } = useMemo(() => {
+  const { geometry } = useMemo(() => {
     const positions = new Float32Array(COUNT * 3)
     for (let i = 0; i < COUNT; i++) {
       positions[i * 3 + 0] = (Math.random() - 0.5) * SPREAD_XZ * 2
@@ -25,7 +25,7 @@ export default function FloatingDust() {
     }
     const geo = new THREE.BufferGeometry()
     geo.setAttribute('position', new THREE.BufferAttribute(positions, 3))
-    return { geometry: geo, initialPositions: positions.slice() }
+    return { geometry: geo }
   }, [])
 
   useFrame((_, delta) => {

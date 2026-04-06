@@ -31,7 +31,7 @@ let _audioCtx: AudioContext | null = null
 
 function getAudioCtx(): AudioContext {
   if (!_audioCtx) {
-    _audioCtx = new (window.AudioContext ?? (window as Record<string,unknown>)['webkitAudioContext'] as typeof AudioContext)()
+    _audioCtx = new (window.AudioContext ?? (window as unknown as Record<string, unknown>)['webkitAudioContext'] as typeof AudioContext)()
   }
   return _audioCtx
 }
