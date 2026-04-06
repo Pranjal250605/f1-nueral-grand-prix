@@ -42,8 +42,9 @@ export function TrackProvider({ children }: { children: ReactNode }) {
     setLoading(true)
     setError(null)
     try {
+      const base = import.meta.env.VITE_API_URL ?? ''
       const res = await fetch(
-        `/api/track/${encodeURIComponent(username.trim())}`,
+        `${base}/api/track/${encodeURIComponent(username.trim())}`,
       )
       if (!res.ok) {
         const body = await res.json().catch(() => ({})) as { detail?: string }

@@ -14,8 +14,9 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { useTrack } from '@/context/TrackContext'
 
-const API_COMMENTARY = '/api/commentary'
-const API_TTS        = '/api/tts'
+const _BASE          = (import.meta.env.VITE_API_URL as string | undefined) ?? ''
+const API_COMMENTARY = `${_BASE}/api/commentary`
+const API_TTS        = `${_BASE}/api/tts`
 
 const LINGER_MS     = 14_000
 const CHAR_DELAY_MS = 28
