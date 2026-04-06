@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+dist/
+.pytest_cache/
+
+# Backend secrets
+backend/.env
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Large assets (use JPG instead)
+frontend/public/cyberpunk_360.png
+frontend/src/assets/cyberpunk_360.png
+
+# Temp / debug files
+frontend/response.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea/
+.vscode/
+*.swp
+
+# Claude local settings (may contain secrets)
+.claude/settings.local.json
